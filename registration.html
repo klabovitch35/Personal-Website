@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson Registration</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="logic.js"></script>
+</head>
+<body>
+    <div class="container2">
+        <header>
+            <h1>
+                Welcome To The Kris Labovitch Experience
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="aboutSalesforce.html">Salesforce Bio</a></li>
+                <li><a href="registration.html">Schedule a Lesson</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="photoGallery.html">Photos</a></li>
+                <li><a href="music.html">Music</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div>
+                <div>
+                    Do you want to take your game to the next level? Do you want to learn how to build enterprise software
+                    on the #1 CRM Platform? As a former NCAA tennis player and high school tennis coach, I can show you
+                    how to take your game to the next level. I also hold <strong>6 certifications</strong> on the salesforce platform, 
+                    so I can teach you everything you need to know to join the rapidly growing Salesforce economy. 
+                </div> 
+                <div class="alignCenter"><video src="videos/TennisCourtGrassVidevo.mov" controls height="300" width="400"></video></div>
+                <table id="lessonTable">
+                    <caption><h3>Lesson Options (Click on Desired Lesson)</h3></caption>
+                        <thead>
+                            <tr>
+                                <th>Lesson</th>
+                                <th>Price</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="slI">
+                                <td>Salesforce Lesson </td>
+                                <td id="slIP">$60</td>
+                                <td>Individual</td>
+                            </tr>
+                            <tr id="slG">
+                                <td>Salesforce Lesson </td>
+                                <td>$45/Person</td>
+                                <td>Group</td>
+                            </tr>
+                            <tr id="tlI">
+                                <td>Tennis Lesson</td>
+                                <td>$40</td>
+                                <td>Individual</td>
+                            </tr>
+                            <tr id="tlG">
+                                <td>Tennis Lesson</td>
+                                <td>$30/Person</td>
+                                <td>Group</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan = "3">Tennis Lessons can be arranged at an indoor court for an additional fee</td>
+                            </tr>
+                        </tfoot>
+                </table>
+                <br>
+                
+                <form name="myform" method="post" action="connect.php">
+
+                    <div>
+                        Type:<br>
+                        <select id="type">
+                            <option value="Group">Group</option>
+                            <option value="Individual">Individual</option>
+                        </select><br>
+                        Cost:<br>
+                        <input type="number" id="cost" name="cost" readonly=true><br>
+                        Total People:<br>
+                        <input type="number" id="people" name="people" value=1><br>
+                        First name:<br>
+                        <input type="text" id="firstName" name="firstname"><br>
+                        Last name:<br>
+                        <input type="text" id="lastName" name="lastName"><br>
+                        Email:<br>
+                        <input type="text" id="email" name="email"><br>
+                        <input id="myButton" type="submit" onchange="validateForm()" value="Submit">              
+                    </div> 
+                </form>
+            
+            </div>
+        </main>
+                
+    <div class="FooterWrapper">
+        <footer>
+            <div>
+                    Feel Free to Reach Out!
+                    <br>
+                    Phone: 234-567-8901
+                    Email: klabo@bu.edu
+                    Address: 20 BU Drive, Boston, MA, 02143
+            </div>
+        </footer>
+    </div>
+    </div>
+</body>
+</html>
+
+
